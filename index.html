@@ -12,7 +12,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100;300;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="CSS/styles.css" />
@@ -27,13 +27,17 @@
         <div class="slider-control-container">
           <div class="css-property-container">
             <h4 class="css-property-key">border-radius:</h4>
-            <div class="css-border-radius-value">30% 20% 30% 20%</div>
+            <div class="css-border-radius-value">
+              30% 20% 30% 20% / 30% 20% 30% 20%
+            </div>
             <button class="copy-to-clipboard-btn btn">Copy</button>
           </div>
           <div class="custom-size-container">
             <div class="custom-size-control-wrapper">
-              <label for="custom-size-btn">Custom size:</label>
-              <button id="custom-size-btn">
+              <label for="custom-size-btn" class="custom-size-label"
+                >Custom size:</label
+              >
+              <button id="custom-size-btn" class="custom-dimensions-btn btn">
                 <span class="btn-switcher"></span>
               </button>
             </div>
@@ -48,49 +52,51 @@
               </div>
             </div>
           </div>
-          <div class="slider-wrapper">
-            <h3 class="slider-label">Top Left</h3>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-              class="slider"
-              step="100"
-            />
-          </div>
-          <div class="slider-wrapper">
-            <h3 class="slider-label">Top Right</h3>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-              class="slider"
-              step="100"
-            />
-          </div>
-          <div class="slider-wrapper">
-            <h3 class="slider-label">Bottom Left</h3>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-              class="slider"
-              step="100"
-            />
-          </div>
-          <div class="slider-wrapper">
-            <h3 class="slider-label">Bottom Right</h3>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value="0"
-              class="slider"
-              step="100"
-            />
+          <div class="sliders-container">
+            <div class="slider-wrapper">
+              <h3 class="slider-label">Top Left</h3>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                step="100"
+              />
+            </div>
+            <div class="slider-wrapper">
+              <h3 class="slider-label">Top Right</h3>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                step="100"
+              />
+            </div>
+            <div class="slider-wrapper">
+              <h3 class="slider-label">Bottom Left</h3>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                step="100"
+              />
+            </div>
+            <div class="slider-wrapper">
+              <h3 class="slider-label">Bottom Right</h3>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                step="100"
+              />
+            </div>
           </div>
         </div>
         <!-- .slider-control-container -->
