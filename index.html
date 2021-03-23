@@ -21,19 +21,21 @@
   </head>
   <body>
     <header><h1 class="main-title">Border radius previewer</h1></header>
-    <div class="generated-shape"></div>
+    <div class="shape-container">
+      <div class="generated-shape"></div>
+    </div>
     <div class="app-container">
       <div class="control-container">
         <div class="slider-control-container">
           <div class="css-property-container">
             <h4 class="css-property-key">border-radius:</h4>
-            <div class="css-border-radius-value">
-              30% 20% 30% 20% / 30% 20% 30% 20%
+            <div class="css-border-radius-value" data-radius-values>
+              0% 0% 0% 0%
             </div>
             <button class="copy-to-clipboard-btn btn">Copy</button>
           </div>
           <div class="custom-size-container">
-            <div class="custom-size-control-wrapper">
+            <div class="custom-size-control-wrapper .change-flex-width">
               <label for="custom-size-btn" class="custom-size-label"
                 >Custom size:</label
               >
@@ -44,11 +46,17 @@
             <div class="dimensions-inputs-container">
               <div class="custom-input-container">
                 <label for="width">Width</label>
-                <input type="number" id="width" value="500" />
+                <input type="number" id="width" value="500" min="1" max="500" />
               </div>
               <div class="custom-input-container">
                 <label for="height">Height</label>
-                <input type="number" id="height" value="500" />
+                <input
+                  type="number"
+                  id="height"
+                  value="500"
+                  min="1"
+                  max="500"
+                />
               </div>
             </div>
           </div>
@@ -61,7 +69,7 @@
                 max="100"
                 value="0"
                 class="slider"
-                step="100"
+                data-shape-corner="top-left"
               />
             </div>
             <div class="slider-wrapper">
@@ -72,18 +80,7 @@
                 max="100"
                 value="0"
                 class="slider"
-                step="100"
-              />
-            </div>
-            <div class="slider-wrapper">
-              <h3 class="slider-label">Bottom Left</h3>
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value="0"
-                class="slider"
-                step="100"
+                data-shape-corner="top-right"
               />
             </div>
             <div class="slider-wrapper">
@@ -94,7 +91,18 @@
                 max="100"
                 value="0"
                 class="slider"
-                step="100"
+                data-shape-corner="bottom-right"
+              />
+            </div>
+            <div class="slider-wrapper">
+              <h3 class="slider-label">Bottom Left</h3>
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value="0"
+                class="slider"
+                data-shape-corner="bottom-left"
               />
             </div>
           </div>

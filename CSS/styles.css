@@ -91,6 +91,11 @@ h1 {
   background-color: #276678;
   transform: translate(-100%, -50%);
   border-radius: 50%;
+  transition: transform 0.2s ease-in;
+}
+
+.btn-switcher-active {
+  transform: translate(0%, -50%);
 }
 
 /* LAYOUT */
@@ -122,13 +127,19 @@ h1 {
   text-align: center;
   margin-top: 1em;
 }
-
+.shape-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+}
 .generated-shape {
   margin: 0 auto;
   width: 500px;
   height: 500px;
   background-color: #1687a7;
   margin-top: 3em;
+  border-radius: 0% 0% 0% 0%;
 }
 
 .css-property-container {
@@ -144,6 +155,7 @@ h1 {
 
 .css-border-radius-value {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-basis: 55%;
   background-color: #d3e0ea;
@@ -157,12 +169,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50px;
 }
 
 .custom-size-control-wrapper {
   display: flex;
   align-items: center;
-  flex-basis: 35%;
+  flex-basis: 100%;
   margin-left: 1.8em;
 }
 
@@ -172,9 +185,13 @@ h1 {
 }
 
 .dimensions-inputs-container {
-  display: flex;
+  display: none;
   flex-basis: 65%;
   justify-content: flex-end;
+}
+
+.custom-dimensions-active {
+  display: flex;
 }
 .custom-input-container {
   display: flex;
