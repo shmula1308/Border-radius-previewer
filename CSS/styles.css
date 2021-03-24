@@ -140,7 +140,7 @@ h1 {
   height: 500px;
   background-color: #1687a7;
   margin-top: 3em;
-  border-radius: 0% 0% 0% 0%;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
   outline: 2px dotted #59beda;
 }
 
