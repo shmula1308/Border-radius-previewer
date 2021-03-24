@@ -83,7 +83,8 @@ h1 {
   background-color: #d3e0ea;
 }
 
-.btn-switcher {
+.btn-switcher,
+.full-control-btn-switcher {
   display: inline-block;
   position: absolute;
   width: 17px;
@@ -140,6 +141,7 @@ h1 {
   background-color: #1687a7;
   margin-top: 3em;
   border-radius: 0% 0% 0% 0%;
+  outline: 2px dotted #59beda;
 }
 
 .css-property-container {
@@ -225,4 +227,27 @@ h1 {
   font-size: 1rem;
   font-weight: 300;
   margin-bottom: 0.5em;
+}
+
+/* EIGHT POINT CONTROL */
+
+.two-point-control {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-point-control .slider-wrapper {
+  flex-basis: 45%;
+}
+
+.toggleDisplay {
+  display: none;
+}
+
+.full-control-sliders {
+  display: none;
+}
+
+div[data-radius-values-eight-points] {
+  display: none;
 }

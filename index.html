@@ -32,6 +32,12 @@
             <div class="css-border-radius-value" data-radius-values>
               0% 0% 0% 0%
             </div>
+            <div
+              class="css-border-radius-value"
+              data-radius-values-eight-points
+            >
+              0% 0% 0% 0% / 0% 0% 0% 0%
+            </div>
             <button class="copy-to-clipboard-btn btn">Copy</button>
           </div>
           <div class="custom-size-container">
@@ -59,6 +65,14 @@
                 />
               </div>
             </div>
+          </div>
+          <div class="custom-size-control-wrapper .change-flex-width">
+            <label for="custom-size-btn" class="custom-size-label"
+              >Full Control:</label
+            >
+            <button id="full-control-btn" class="custom-dimensions-btn btn">
+              <span class="full-control-btn-switcher"></span>
+            </button>
           </div>
           <div class="sliders-container">
             <div class="slider-wrapper">
@@ -106,10 +120,109 @@
               />
             </div>
           </div>
+          <div class="sliders-container full-control-sliders">
+            <div class="two-point-control">
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Top Left Horizontal</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="top-left"
+                />
+              </div>
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Top Left Vertical</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="top-right"
+                />
+              </div>
+            </div>
+            <div class="two-point-control">
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Top Right Horizontal</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-right"
+                />
+              </div>
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Top Right Vertical</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-left"
+                />
+              </div>
+            </div>
+            <div class="two-point-control">
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Bottom Right Horizontal</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-left"
+                />
+              </div>
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Bottom Right Vertical</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-left"
+                />
+              </div>
+            </div>
+            <div class="two-point-control">
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Bottom Left Horizontal</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-left"
+                />
+              </div>
+              <div class="slider-wrapper">
+                <h3 class="slider-label">Bottom Left Vertical</h3>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="0"
+                  class="eight-point-slider slider"
+                  data-shape-corner="bottom-left"
+                />
+              </div>
+            </div>
+          </div>
         </div>
         <!-- .slider-control-container -->
       </div>
       <!-- .control-container -->
     </div>
+    <!-- .app-container  -->
   </body>
 </html>
