@@ -13,6 +13,8 @@ const customDimensions = document.querySelector('.dimensions-inputs-container');
 const shapeWidth = document.getElementById("width");
 const shapeHeight = document.getElementById("height");
 const copyToClipboardBtn = document.querySelector('.copy-to-clipboard-btn');
+const copiedToClipboardAlert = document.querySelector('.copied-to-clipboard-alert');
+
 
 let topLeft = 0;
 let topRight = 0;
@@ -166,29 +168,39 @@ shapeHeight.addEventListener('input', (ev) => {
 })
 
 
-// copyToClipboardBtn.addEventListener('click', copyToClipBoard);
 
-// function copyToClipBoard() {
-//    if(window.getComputedStyle(eightPointValues,null).display === 'none') {
-    
-//         let borderRadiusVal = document.querySelector('[data-radius-values]'); //select the element
-//         let elementText = borderRadiusVal.textContent; //get the text content from the element
-//         copyText(elementText); //use the copyText function below
-      
-      
-//       //If you only want to put some Text in the Clipboard just use this function
-//       // and pass the string to copied as the argument.
-//       function copyText(text) {
-//         navigator.clipboard.writeText(text);
-//         alert('Copied the text:' + text);
-//       }
+copyToClipboardBtn.addEventListener('click', copyToClipBoard);
 
-//     } else {
-//         let str = document.querySelector('[data-radius-values-eight-points]').innerHTML;
-//         const el = document.createElement('textarea');
-//         el.value = str;
-//         el.select();
-//         document.execCommand('copy');
-//         alert('Copied the text:' + el.value);
-//     }
-// }
+function copyToClipBoard() {
+ 
+   if(window.getComputedStyle(eightPointValues,null).display === 'none') {
+        let borderRadiusVal = document.querySelector('[data-radius-values]'); //select the element
+        let elementText = borderRadiusVal.textContent; //get the text content from the element
+        let input = document.createElement('input');
+        document.body.appendChild(input);
+        input.value = elementText;
+        input.style.opacity = '0';
+        input.focus();
+        input.select();
+        const result = document.execCommand('copy');
+        copiedToClipboardAlert.style.display = 'flex';
+        setTimeout(() => {
+            copiedToClipboardAlert.style.display = 'none';
+        },2000)
+
+    } else {
+        let eightPointsVal = document.querySelector('[data-radius-values-eight-points]'); //select the element
+        let elementText = eightPointsVal.textContent; //get the text content from the element
+        let input = document.createElement('input');
+        document.body.appendChild(input);
+        input.value = elementText;
+        input.style.opacity = '0';
+        input.focus();
+        input.select();
+        const result = document.execCommand('copy');
+        copiedToClipboardAlert.style.display = 'flex';
+        setTimeout(() => {
+            copiedToClipboardAlert.style.display = 'none';
+        },2000)
+    }
+}
